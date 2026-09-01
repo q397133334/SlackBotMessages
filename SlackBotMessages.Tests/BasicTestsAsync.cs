@@ -10,7 +10,19 @@ namespace SlackBotMessages.Tests
     public class BasicAsyncTests
     {
         private static string WebHookUrl =>
-            "https://hooks.slack.com/services/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";
+            Environment.GetEnvironmentVariable("SLACK_WEBHOOK_URL");
+
+        /// <summary>
+        ///     These are live integration tests which post to a real Slack webhook.
+        ///     They are skipped unless the SLACK_WEBHOOK_URL environment variable is set.
+        /// </summary>
+        [SetUp]
+        public void SkipIfNoWebHookUrl()
+        {
+            if (string.IsNullOrWhiteSpace(WebHookUrl))
+                Assert.Ignore(
+                    "Set the SLACK_WEBHOOK_URL environment variable to run this live Slack integration test.");
+        }
 
         /// <summary>
         ///     A simple example of a message which looks like it has been send by an alien

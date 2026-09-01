@@ -45,7 +45,6 @@ namespace SlackBotMessages
         public const string ArticulatedLorry = ":articulated_lorry:";
         public const string Astonished = ":astonished:";
         public const string Atm = ":atm:";
-        public const string Atur = "Nature";
         public const string B = ":b:";
         public const string Baby = ":baby:";
         public const string BabyBottle = ":baby_bottle:";
@@ -78,7 +77,6 @@ namespace SlackBotMessages
         public const string Bikini = ":bikini:";
         public const string Bird = ":bird:";
         public const string Birthday = ":birthday:";
-        public const string Bject = "Objects";
         public const string BlackCircle = ":black_circle:";
         public const string BlackJoker = ":black_joker:";
         public const string BlackLargeSquare = ":black_large_square:";
@@ -426,7 +424,6 @@ namespace SlackBotMessages
         public const string Koala = ":koala:";
         public const string Koko = ":koko:";
         public const string Kr = ":kr:";
-        public const string Lace = "Places";
         public const string LargeBlueCircle = ":large_blue_circle:";
         public const string LargeBlueDiamond = ":large_blue_diamond:";
         public const string LargeOrangeDiamond = ":large_orange_diamond:";
@@ -878,7 +875,6 @@ namespace SlackBotMessages
         public const string X = ":x:";
         public const string YellowHeart = ":yellow_heart:";
         public const string Yen = ":yen:";
-        public const string Ymbol = "Symbols";
         public const string Yum = ":yum:";
         public const string Zap = ":zap:";
         public const string Zero = ":zero:";
