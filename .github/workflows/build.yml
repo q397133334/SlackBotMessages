@@ -5,11 +5,7 @@ on:
     branches:
       - master
       - main
-      - 'claude/**'
   pull_request:
-    branches:
-      - master
-      - main
 
 jobs:
   build:
