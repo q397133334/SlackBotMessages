@@ -1,11 +1,19 @@
 name: release
 
-# Publishes the NuGet package when a version tag (e.g. v2.1.0) is pushed.
+# Publishes the NuGet package when a version tag (e.g. v2.1.0) is pushed, or
+# when run manually via the Actions tab / API (workflow_dispatch), in which
+# case the given tag and a matching GitHub Release are created automatically.
 # Requires a repository secret named NUGET_API_KEY (nuget.org API key).
 on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to create (e.g. v2.1.0)'
+        required: true
+        default: 'v2.1.0'
 
 permissions:
   contents: write
@@ -42,5 +50,8 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          # On a tag push this is the pushed tag; on manual dispatch the action
+          # creates this tag at the checked-out commit.
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
           files: ./artifacts/*.nupkg
           generate_release_notes: true
