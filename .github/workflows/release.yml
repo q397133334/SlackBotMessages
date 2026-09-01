@@ -32,12 +32,19 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore SlackBotMessages/SlackBotMessages.csproj
+
+      - name: Build
+        run: >-
+          dotnet build SlackBotMessages/SlackBotMessages.csproj
+          --configuration Release
+          --no-restore
 
       - name: Pack
         run: >-
           dotnet pack SlackBotMessages/SlackBotMessages.csproj
           --configuration Release
+          --no-build
           --output ./artifacts
 
       - name: Push to NuGet.org
