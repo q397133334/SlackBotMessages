@@ -19,7 +19,6 @@
       - Works with .NET Core, .NET Standard and .NET Framework</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>Slack,Bot,Messages,Messaging,WebRequest,WebHook,Attachments,SlackBot,SlackMessages</PackageTags>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
