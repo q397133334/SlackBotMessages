@@ -2,20 +2,22 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>XiaoYou.SlackBotMessage</PackageId>
         <Version>2.1.0</Version>
-        <Description>A library for sending rich formatted Slack Bot Messages. Works with .NET Core, .NET Standard and .NET Framework.</Description>
+        <Description>A library for sending rich formatted Slack Bot Messages. Works with .NET Core, .NET Standard and .NET Framework. This is a maintained fork of Paul Seal's SlackBotMessages.</Description>
         <Authors>Paul Seal</Authors>
-        <Copyright>Copyright 2019</Copyright>
-        <PackageProjectUrl>https://github.com/prjseal/SlackBotMessages/</PackageProjectUrl>
-        <PackageIconUrl>https://github.com/prjseal/SlackBotMessages/blob/master/sbmlogo.jpg?raw=true</PackageIconUrl>
-        <RepositoryUrl>https://github.com/prjseal/SlackBotMessages/</RepositoryUrl>
+        <Copyright>Copyright (c) 2016 Paul Seal</Copyright>
+        <PackageProjectUrl>https://github.com/q397133334/SlackBotMessages/</PackageProjectUrl>
+        <PackageIconUrl>https://github.com/q397133334/SlackBotMessages/blob/master/sbmlogo.jpg?raw=true</PackageIconUrl>
+        <RepositoryUrl>https://github.com/q397133334/SlackBotMessages/</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>- upgraded target framework to .NET Standard 2.0
       - updated Newtonsoft.Json to 13.0.3
       - removed unused/obsolete package references (NuGet.Build, System.Runtime.Serialization.Json)
+      - removed malformed emoji constants
       - Send richly formatted messages with attachments
       - Works with .NET Core, .NET Standard and .NET Framework</PackageReleaseNotes>
-        <PackageLicenseUrl>https://github.com/prjseal/SlackBotMessages/blob/master/License.md</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>Slack,Bot,Messages,Messaging,WebRequest,WebHook,Attachments,SlackBot,SlackMessages</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
